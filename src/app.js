@@ -8,6 +8,8 @@ const apirequest = require('./utils/weatherapi')
 
 const app = express()
 
+const PORT = process.env.PORT || 3000
+
 console.log(__dirname);
 console.log(path.join(__dirname, '../public'));
 
@@ -131,6 +133,6 @@ app.get('*' , (req, res) => {
     })
 })
 
-app.listen(3000, '0.0.0.0',() => {
-    console.log("Server is up and running at port 3000")
+app.listen(PORT,() => {
+    console.log("Server is up and running at port " + PORT)
 })
