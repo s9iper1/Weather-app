@@ -13,7 +13,7 @@ const apirequest = (latitude, longitude, callback) => {
                 callback("please check coordinates", undefined)
             } else {
                 callback(undefined, body.current.weather_descriptions[0]+' There is ' +body.current.temperature + ' degree out there and there is ' 
-                +body.current.precip+ '% chance of rain and humidity is ' + body.current.humidity)
+                +body.current.precip+ '% chance of rain and humidity is ' + body.current.humidity + '% ')
             }
         }
     })
