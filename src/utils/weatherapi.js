@@ -12,7 +12,7 @@ const apirequest = (latitude, longitude, callback) => {
             if(body.hasOwnProperty('success')) {
                 callback("please check coordinates", undefined)
             } else {
-                callback(undefined, body.current.weather_descriptions[0]+' There is ' +body.current.temperature + ' degree out there and there is ' 
+                callback(undefined, body.current.weather_descriptions[0]+' There is ' +body.current.temperature + ' degree outside and it feels like '+body.current.feelslike+' degree and '
                 +body.current.precip+ '% chance of rain and humidity is ' + body.current.humidity + '% ')
             }
         }
